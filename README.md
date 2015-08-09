@@ -7,10 +7,9 @@ The toolkit consists of TXD, a Z-code disassembler, and Infodump, a story file t
 Originally from
 - http://inform-fiction.org/zmachine/ztools.html
 
-# Original readme.1st
+## Original readme.1st
 
-Ztools 7/3.1 - 11/7/1998
-------------------------
+##### Ztools 7/3.1 - 11/7/1998
 
 Author:
 
