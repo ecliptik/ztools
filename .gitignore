@@ -1,3 +1,9 @@
+#ztools binaries
+check
+infodump
+pix2gif
+txd
+
 # Object files
 *.o
 *.ko
