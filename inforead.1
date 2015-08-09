@@ -1,0 +1,40 @@
+.TH "inforead" 1 "November 1998" "Ztools 7.3.1"
+.SH NAME
+inforead \- read Infocom data files from an IBM bootable diskette
+.SH SYNOPSIS
+.B inforead
+story-file
+.RB "[ " start-track
+.RB "[ " drive#
+.RB "]]"
+.SH DESCRIPTION
+.B Inforead
+is a program for reading infocom format story files from an IBM
+bootable diskette.
+.LP
+The data file is extracted starting at track 6 and continues
+for the length of the data area. The data file that is created
+is the correct length and is verified using the checksum in the
+data area.
+.SH OPTIONS
+This program does not accept command-line options.
+.SH LIMITATIONS
+This only works for type 3 games on IBM 5 1/4" diskettes. I
+believe that all of the bootable Infocom games were type 3.
+.LP
+See the source code (\fCinforead.c\fP in the source distribution)
+for more details about this tool.
+.SH NOTES
+This program has been largely supplanted by Stefan Jokisch's ZCut,
+not part of the ZTools distribution but available at the Interactive
+Fiction Archive (ftp://ftp.gmd.de/if-archive)
+.SH SEE ALSO
+.BR check (1),
+.BR infodump (1),
+.BR pix2gif (1),
+.BR txd (1)
+.SH AUTHOR
+Mark Howell 13 September 1992 howell_ma@movies.enet.dec.com
+.SH CURRENT MAINTAINER
+Matthew Russotto russotto@pond.com (but see NOTES)
+.

@@ -1,0 +1,71 @@
+.TH "infodump" 1 "November 1998" "Ztools 7.3.1"
+.SH NAME
+infodump \- data file dumper for infocom format game files
+.SH SYNOPSIS
+.B infodump
+.RB "[ \-iamostgdf ]"
+.RB "[\| " \-c
+.IR n " \|]"
+.RB "[\| " \-w
+.IR n " \|]"
+.RB "[\| " \-u
+.IR file " \|]"
+story-file
+.RB "[\| story-file... \|]"
+.SH DESCRIPTION
+.B Infodump
+is a program for displaying the contents of an Infocom format story file.
+It works for V1 to V8 games, modulo the limitations listed below.
+.SH OPTIONS
+The following options are supported
+.TP 6
+.B \-i
+Show game information in the story file header.
+This is the default operation for \fBinfodump\fP:
+if not switches are given, then only the header will be displayed.
+.TP
+.B \-a
+Show abbreviations.
+.TP
+.B \-m
+Show the data file map.
+.TP
+.B \-o
+Display information about all objects defined in the story file.
+.TP
+.B \-t
+Show the object tree, with names of contained objects displayed indented
+from the name of the containing object.
+.TP
+.B \-g
+Show the verb grammar.
+.TP
+.B \-d
+Show the story dictionary
+.TP
+.B \-f
+Enable all of the above options (-a, -m, -o, -t, -g and -d)
+.TP
+.B \-s
+Display Inform symbolic names in object and grammar displays.
+.TP
+.B \-c \fIn\fP
+The numbers of columns to use when displaying the dictionary.
+.TP
+.B \-w \fIn\fP
+Specifies the display width, used to determine where to word wrap.
+If \fIn\fP is 0, then no wrapping will be performed.
+.TP
+.B \-u \fIfile\fP
+Display symbols from file in object and grammar displays.
+Use of this option implies -s.
+.SH SEE ALSO
+.BR check (1),
+.BR inforead (1),
+.BR pix2gif (1),
+.BR txd (1)
+.SH AUTHOR
+Mark Howell 28 August 1992 howell_ma@movies.enet.dec.com
+.SH CURRENT MAINTAINER
+Matthew Russotto russotto@pond.com
+.

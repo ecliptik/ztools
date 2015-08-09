@@ -1,0 +1,53 @@
+.TH "txd" 1 "November 1998" "Ztools 7.3.1"
+.SH NAME
+txd \- Z code disassembler for Infocom game files
+.SH SYNOPSIS
+.B txd
+.RB "[ \-adgns ]"
+.RB "[\| " \-w
+.IR n " \|]"
+.RB "[\| " \-u
+.IR file " \|]"
+.RB "[\| " \-S
+.IR n " \|]"
+story-file
+.SH DESCRIPTION
+.B Txd
+is a program for disassembling an Infocom format story file.
+It can handle all version of the story file format (V1 through V8).
+.SH OPTIONS
+.B txd
+supports the following options:
+.TP 8
+.B \-a
+generate alternate syntax used by Inform.
+.TP
+.B \-d
+dump hex of opcodes and data.
+.TP
+.B \-g
+turn off grammar for action routines.
+.TP
+.B \-n
+use addresses instead of labels
+.TP
+.B \-w \fIn\fP
+display width (0 = no wrap)
+.TP
+.B \-s
+Symbolic mode (Inform 6+ only)
+.TP
+.B \-u \fIfile\fP
+Read user symbol table, implies -s for Inform games
+.TP
+.B \-S \fIn\fP
+Dump high strings only, starting at address \fIn\fP
+.SH SEE ALSO
+.BR check (1),
+.BR infodump (1),
+.BR inforead (1),
+.BR pix2gif (1)
+.SH AUTHOR
+Mark Howell 25 August 1992 howell_ma@movies.enet.dec.com
+.SH CURRENT MAINTAINER
+Matthew Russotto russotto@pond.com

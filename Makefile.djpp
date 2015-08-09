@@ -1,0 +1,64 @@
+# ZTools 7/3
+# Provided by Esa A E Peuha <peuha@cc.helsinki.fi>
+# DJGPP C makefile for the Infocom tools
+# rename to Makefile
+
+CC = gcc
+CFLAGS = -O2
+LDFLAGS =
+LIBS =
+
+NROFF	= nroff
+
+MANPAGES = infodump.1 inforead.1 txd.1 check.1 pix2gif.1
+FORMATTEDMAN = $(MANPAGES:.1=.man)
+
+CINC =
+COBJS = check.o
+
+IINC = tx.h
+IOBJS = infodump.o showhead.o showdict.o showobj.o showverb.o txio.o infinfo.o symbols.o
+
+PINC = pix2gif.h
+POBJS = pix2gif.o
+
+RINC =
+ROBJS = inforead.o
+
+TINC = tx.h
+TOBJS = txd.o txio.o showverb.o infinfo.o symbols.o showobj.o
+
+all : check infodump pix2gif inforead txd
+
+check : $(COBJS)
+	$(CC) -o $@ $(LDFLAGS) $(COBJS) $(LIBS)
+
+$(COBJS) : $(CINC)
+
+infodump : $(IOBJS)
+	$(CC) -o $@ $(LDFLAGS) $(IOBJS) $(LIBS)
+
+$(IOBJS) : $(IINC)
+
+pix2gif : $(POBJS)
+	$(CC) -o $@ $(LDFLAGS) $(POBJS) $(LIBS)
+
+$(POBJS) : $(PINC)
+
+inforead : $(ROBJS)
+	$(CC) -o $@ $(LDFLAGS) $(ROBJS) $(LIBS)
+
+$(ROBJS) : $(RINC)
+
+txd : $(TOBJS)
+	$(CC) -o $@ $(LDFLAGS) $(TOBJS) $(LIBS)
+
+$(TOBJS) : $(TINC)
+
+clean :
+	-rm *.o *.exe check infodump pix2gif inforead txd $(FORMATTEDMAN)
+
+doc: $(FORMATTEDMAN)
+
+%.man: %.1
+	$(NROFF) -man $*.1 | col -b > $*.man
