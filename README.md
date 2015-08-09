@@ -1,4 +1,4 @@
-=Ztools=
+# Ztools
 
 An essential set of Z-machine tools for interpreter authors, experienced Inform programmers, and Z-code hackers, originally written by Mark Howell, and now maintained by Matthew Russotto.
 
@@ -7,7 +7,7 @@ The toolkit consists of TXD, a Z-code disassembler, and Infodump, a story file t
 Originally from
 - http://inform-fiction.org/zmachine/ztools.html
 
-=Original readme.1st=
+# Original readme.1st
 
 Ztools 7/3.1 - 11/7/1998
 ------------------------
