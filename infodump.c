@@ -78,11 +78,13 @@ static void show_help (const char *);
 static void process_story (const char *, int *, int, int);
 static void fix_dictionary (void);
 static void show_map (void);
+void init_symbols(char *fname);
 #else
 static void show_help ();
 static void process_story ();
 static void fix_dictionary ();
 static void show_map ();
+void init_symbols();
 #endif
 
 /* Options */
@@ -207,8 +209,13 @@ char *argv[];
  */
 
 #ifdef __STDC__
+void configure_inform_tables(unsigned long, unsigned short,
+			     unsigned long, unsigned long, unsigned long,
+			     unsigned long, unsigned long, unsigned long);
+
 static void show_help (const char *program)
 #else
+void configure_inform_tables();
 static void show_help (program)
 const char *program;
 #endif

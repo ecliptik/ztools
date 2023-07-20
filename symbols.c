@@ -65,8 +65,10 @@ static int routine_entries;
 
 
 #ifdef __STDC__
+int print_inform_attribute_name(unsigned long, int);
 static int get_type_from_name(char *tname)
 #else
+int print_inform_attribute_name();
 static int get_type_from_name(tname)
 char *tname;
 #endif
