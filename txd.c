@@ -96,6 +96,17 @@ static void dump_data (unsigned long, unsigned long);
 static void dump_opcode (unsigned long, int, int, int *, int);
 static void dump_operand (unsigned long *, int, int, int *, int *);
 static void print_variable (int);
+void configure_inform_tables(unsigned long, unsigned short,
+                             unsigned long, unsigned long, unsigned long,
+                             unsigned long, unsigned long, unsigned long);
+int print_attribute_name(unsigned long, int);
+int print_property_name(unsigned long, int);
+int print_local_name(unsigned long, int);
+int print_global_name(unsigned long, int);
+int print_inform_action_name(unsigned long, int);
+void configure_object_tables(unsigned int *, unsigned long *, unsigned long *,
+			     unsigned long *, unsigned long *);
+void init_symbols(char *fname);
 #else
 static void process_story ();
 static void decode_program ();
@@ -125,6 +136,10 @@ static void dump_data ();
 static void dump_opcode ();
 static void dump_operand ();
 static void print_variable ();
+int print_property_name();
+int print_local_name();
+int print_global_name();
+void init_symbols();
 #endif
 
 static unsigned long pctable[MAX_PCS];

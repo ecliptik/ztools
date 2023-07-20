@@ -12,9 +12,11 @@ void configure_dictionary
 void configure_abbreviations
     (unsigned int *, unsigned long *, unsigned long *, unsigned long *,
      unsigned long *);
+int decode_text_to_buffer(unsigned long *address, char *buf);
 #else
 void configure_dictionary ();
 void configure_abbreviations ();
+int decode_text_to_buffer();
 #endif
 
 /*

@@ -20,6 +20,16 @@ static void show_words
 	(unsigned int, unsigned long, unsigned int, unsigned int);
 static unsigned long lookup_word
 	(unsigned long, unsigned int, unsigned int, unsigned int);
+void configure_inform_tables(unsigned long, unsigned short,
+                             unsigned long, unsigned long, unsigned long,
+                             unsigned long, unsigned long, unsigned long);
+int print_attribute_name(unsigned long, int);
+int print_property_name(unsigned long, int);
+int print_local_name(unsigned long, int);
+int print_global_name(unsigned long, int);
+int print_inform_action_name(unsigned long, int);
+void configure_object_tables(unsigned int *, unsigned long *, unsigned long *,
+			     unsigned long *, unsigned long *);
 #else
 static void show_verb_parse_table ();
 static void show_action_tables ();
@@ -27,6 +37,10 @@ static void show_preposition_table ();
 static void show_preposition ();
 static void show_words ();
 static unsigned long lookup_word ();
+void configure_inform_tables();
+int print_attribute_name();
+int print_inform_action_name();
+void configure_object_tables();
 #endif
 
 static const int verb_sizes[4] = { 2, 4, 7, 0 };
